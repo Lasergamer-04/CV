@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+
+        <nav class="text-center mb-6">
+            <a href="index.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">CV</a>
+            <a href="info_persos.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">À propos</a>
+            <a href="grid.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Informations Supplémentaires</a>
+        </nav>
+
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold">Informations Supplémentaires</h1>
+            <p class="text-gray-600">Découvrez plus de détails sur mes projets et compétences linguistiques.</p>
+        </header>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Projet 1 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projet 1: Portfolio</h2>
+                <p class="text-gray-700 mt-2">Un de mes Projets est ce CV, en HTML avec TailwindCSS.</p>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projet 2: Application Python</h2>
+                <p class="text-gray-700 mt-2">Développement d'une application de Sudoku avec python et Kivy.</p>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projet 3: Python</h2>
+                <p class="text-gray-700 mt-2">Création d'un Tic Tac Toe en Python.</p>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projet 4: WEB</h2>
+                <p class="text-gray-700 mt-2">Création d'un site web pour faire une Pub d'un Produit en Anglais.</p>
+            </div>
+
+            <!-- Projet 5 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projet 5: Python</h2>
+                <p class="text-gray-700 mt-2">Création d'un Programme de pipopipette, avec un robot basé sur le minmax, en Python.</p>
+            </div>
+
+            <!-- Langues 1 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Langue: Français</h2>
+                <p class="text-gray-700 mt-2">Langue maternelle.</p>
+            </div>
+
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Langue: Allemand</h2>
+                <p class="text-gray-700 mt-2">Langue maternelle.</p>
+            </div>
+
+            <!-- Langue 2 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Langue: Anglais</h2>
+                <p class="text-gray-700 mt-2">Niveau B2 (certifié TOEIC)</p>
+            </div>
+
+            <!-- Langue 3 -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Langue: Espagnol</h2>
+                <p class="text-gray-700 mt-2">Niveau A2</p>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
