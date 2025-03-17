@@ -7,36 +7,86 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
-        <nav class="text-center">
-            <a href="index.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">CV</a>
-            <a href="info_persos.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">À propos</a>
-            <a href="grid.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Informations Supplémentaires</a>
-        </nav>
+    <!-- Navigation -->
+    <nav class="flex justify-center space-x-4 my-6">
+        <a href="index.html" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600">CV</a>
+        <a href="info_persos.html" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base">À propos</a>
+        <a href="grid.html" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600">Informations Supplémentaires</a>
+    </nav>
 
-        <section class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2">À propos de moi</h2>
-            <p class="mt-2">
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 sm:p-6 bg-white shadow-lg rounded-lg">
+        <!-- About Me Section -->
+        <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2">
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center">
+                <span class="material-icons text-blue-500 mr-2"><img src="Images/silhouette.png" alt="silhouette" class="h-6 w-6"></span> À propos de moi
+            </h2>
+            <p class="mt-4 text-gray-700 leading-relaxed">
                 J'aime beaucoup l'informatique et la technologie.
                 Je suis passionné par le développement web et python.
                 J'aime apprendre de nouvelles choses et relever des défis.
+                Je suis également un sportif, j'aime le triathlon et l'aviron.
             </p>
         </section>
-
-        <section class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2">Mes Hobbies</h2>
-            <ul class="mt-2 space-y-2">
-                <li>- Développement de projets personnels</li>
-                <li>- Lecture</li>
-                <li>- Jeux vidéo</li>
-                <li>- Triathlon</li>
-            </ul>
+    
+        <!-- Hobbies Section -->
+        <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2">
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center">
+                <span class="material-icons text-blue-500 mr-2">🔥</span> Mes Hobbies
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                <!-- Hobby 1 -->
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-2">
+                        <span class="material-icons text-blue-500 mr-2"><img src="Images/coder.png" alt="Coder" class="h-6 w-6"></span>
+                        <h3 class="text-lg font-semibold">Coder</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        J'aime créer des projets personnels en développement web et en python. 
+                        Pour en découvrir plus, allez voir sur la page Informations Supplémentaires.
+                    </p>
+                </div>
+                <!-- Hobby 2 -->
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-2">
+                        <span class="material-icons text-blue-500 mr-2"><img src="Images/book.jpeg" alt="livre" class="w-6 h-6"></span>
+                        <h3 class="text-lg font-semibold">Lecture</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        J'aime lire des livres de science-fiction et de fantasy. 
+                        J'ai lu des séries comme Harry Potter, Percy Jackson, et bien d'autres.
+                    </p>
+                </div>
+                <!-- Hobby 3 -->
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow sm:col-span-2">
+                    <div class="flex items-center mb-2">
+                        <span class="material-icons text-blue-500 mr-2"><img src="Images/run.jpeg" alt="running" class="w-6 h-6"></span>
+                        <h3 class="text-lg font-semibold">Sport</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        Je suis un passionné de triathlon, et j'ai réussi à atteindre les championnats de France d'aquathlon. 
+                        De plus, je suis investi dans le sport à l'école avec l'UNSS et je me suis qualifié aux championnats de France d'aviron indoor.
+                    </p>
+                </div>
+            </div>
         </section>
-
-        <section class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2">Ce que je cherche</h2>
-            <p class="mt-2">Je suis à la recherche d'une opportunité pour développer mes compétences en développement web, intégrer une équipe dynamique et travailler sur des projets innovants.</p>
+    
+        <!-- Goals Section -->
+        <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-4">
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center">
+                <span class="material-icons text-blue-500 mr-2"><img src="Images/chercher.jpeg" class="h-6 w-6"></span> Ce que je cherche
+            </h2>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+                Je suis à la recherche d'une opportunité pour développer mes compétences en développement web, intégrer une équipe dynamique et travailler sur des projets innovants.
+            </p>
         </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-6">
+        <div class="max-w-4xl mx-auto text-center text-sm">
+            &copy; 2025 Mon Portfolio. Tous droits réservés.
+        </div>
+    </footer>
 </body>
 </html>
