@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>    
     <script src="script.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg">
-
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300 light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
         <!-- Navigation -->
         <nav class="flex justify-center space-x-4 mb-4 sm:mb-6">
-            <a href="index.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="fr">CV</a>
-            <a href="info_persos.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="fr">À propos</a>
-            <a href="grid.html?lang=fr" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base" data-lang="fr">Informations Supplémentaires</a>
-            <a href="index.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="de" style="display: none;">Lebenslauf</a>
-            <a href="info_persos.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="de" style="display: none;">Über mich</a>
-            <a href="grid.html?lang=de" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
+
+            <button onclick="toggleTheme()" class="w-8 h-8">
+                <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
+            </button>
+
+            <a href="index.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">CV</a>
+            <a href="info_persos.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">À propos</a>
+            <a href="grid.html?lang=fr" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="fr">Informations Supplémentaires</a>
+
+            <a href="index.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Lebenslauf</a>
+            <a href="info_persos.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Über mich</a>
+            <a href="grid.html?lang=de" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
             <!-- Drapeaux pour changer de langue -->
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
@@ -29,89 +39,89 @@
             </div>
         </nav>
 
-        <header class="text-center mb-6">
+        <header class="text-center mb-6 light:text-gray-900 dark:text-gray-100">
             <h1 class="text-3xl font-bold" data-lang="fr">Informations Supplémentaires</h1>
             <h1 class="text-3xl font-bold" data-lang="de" style="display: none;">Zusätzliche Informationen</h1>
-            <p class="text-gray-600" data-lang="fr">Découvrez plus de détails sur mes projets et Diplomes.</p>
-            <p class="text-gray-600" data-lang="de" style="display: none;">Entdecken Sie mehr über meine Projekte und Zertifikate.</p>
+            <p class="text-gray-600 light:text-gray-600 dark:text-gray-300" data-lang="fr">Découvrez plus de détails sur mes projets et Diplomes.</p>
+            <p class="text-gray-600 light:text-gray-600 dark:text-gray-300" data-lang="de" style="display: none;">Entdecken Sie mehr über meine Projekte und Zertifikate.</p>
         </header>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Projets -->
             <div>
-                <h2 class="text-2xl font-bold mb-4" data-lang="fr">Projets</h2>
-                <h2 class="text-2xl font-bold mb-4" data-lang="de" style="display: none;">Projekte</h2>
+                <h2 class="text-2xl font-bold mb-4 light:text-gray-900 dark:text-gray-100" data-lang="fr">Projets</h2>
+                <h2 class="text-2xl font-bold mb-4 light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekte</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <!-- Projet 1 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 1:&nbsp;Portfolio</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 1:&nbsp;Portfolio</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Un de mes Projets est ce CV, en HTML avec TailwindCSS et un peu de JS.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Eines meiner Projekte ist dieser Lebenslauf, erstellt in HTML mit TailwindCSS und etwas JS.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 1:&nbsp;Portfolio</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 1:&nbsp;Portfolio</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Un de mes Projets est ce CV, en HTML avec TailwindCSS et un peu de JS.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Eines meiner Projekte ist dieser Lebenslauf, erstellt in HTML mit TailwindCSS und etwas JS.</p>
                         <a href="https://github.com/Lasergamer-04/CV" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/Lasergamer-04/CV" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
                     </div>
                     <!-- Projet 2 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 2:&nbsp;Application Python</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 2:&nbsp;Python-Anwendung</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Développement d'une application de Sudoku avec python et Kivy avec un camarade de classe.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Entwicklung einer Sudoku-Anwendung mit Python und Kivy zusammen mit einem Klassenkameraden.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 2:&nbsp;Application Python</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 2:&nbsp;Python-Anwendung</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Développement d'une application de Sudoku avec python et Kivy avec un camarade de classe.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Entwicklung einer Sudoku-Anwendung mit Python und Kivy zusammen mit einem Klassenkameraden.</p>
                         <a href="https://github.com/eze-lab/Sudokube" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/eze-lab/Sudokube" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
                     </div>
                     <!-- Projet 3 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 3:&nbsp;Python</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 3:&nbsp;Python</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Création d'un Tic Tac Toe en Python.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Erstellung eines Tic Tac Toe-Spiels in Python.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 3:&nbsp;Python</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 3:&nbsp;Python</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Création d'un Tic Tac Toe en Python.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Erstellung eines Tic Tac Toe-Spiels in Python.</p>
                         <a href="https://github.com/Lasergamer-04/TikTakToe" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/Lasergamer-04/TikTakToe" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
                     </div>
                     <!-- Projet 4 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 4:&nbsp;WEB</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 4:&nbsp;Web</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Création d'un site web pour faire une Pub d'un Produit en Anglais.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Erstellung einer Website zur Werbung für ein Produkt auf Englisch.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 4:&nbsp;WEB</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 4:&nbsp;Web</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Création d'un site web pour faire une Pub d'un Produit en Anglais.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Erstellung einer Website zur Werbung für ein Produkt auf Englisch.</p>
                         <a href="https://github.com/Lasergamer-04/English_project" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/Lasergamer-04/English_project" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
                     </div>
                     <!-- Projet 5 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 5:&nbsp;Python</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 5:&nbsp;Python</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Création d'un Programme de pipopipette, avec un robot basé sur le minmax, sans interface graphique.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Erstellung eines Pipopipette-Programms mit einem Minimax-basierten Bot, ohne grafische Benutzeroberfläche.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 5:&nbsp;Python</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 5:&nbsp;Python</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Création d'un Programme de pipopipette, avec un robot basé sur le minmax, sans interface graphique.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Erstellung eines Pipopipette-Programms mit einem Minimax-basierten Bot, ohne grafische Benutzeroberfläche.</p>
                         <a href="https://github.com/Lasergamer-04/Pipopipette" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/Lasergamer-04/Pipopipette" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
 
                     </div>
                     <!-- Projet 6 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 6:&nbsp;Python</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 6:&nbsp;Python</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Mon dernier Projet Python, la création d'un jeux de jump and run.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Mein neuestes Python-Projekt: Erstellung eines Jump-and-Run-Spiels.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 6:&nbsp;Python</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 6:&nbsp;Python</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Mon dernier Projet Python, la création d'un jeux de jump and run.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Mein neuestes Python-Projekt: Erstellung eines Jump-and-Run-Spiels.</p>
                         <a href="https://github.com/Lasergamer-04/Run_and_jump" class="text-blue-500 mt-2" data-lang="fr">Voir le code</a>
                         <a href="https://github.com/Lasergamer-04/Run_and_jump" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Code ansehen</a>
                     </div>
                     <!-- Projet 7 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 7:&nbsp;C</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 7:&nbsp;C</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">J'ai fait plusieurs petits programmes en C.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Ich habe mehrere kleine Programme in C erstellt.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 7:&nbsp;C</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 7:&nbsp;C</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">J'ai fait plusieurs petits programmes en C.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Ich habe mehrere kleine Programme in C erstellt.</p>
                         <a href="https://github.com/Lasergamer-04/C" class="text-blue-500 mt-2" data-lang="fr">Voir les projets</a>
                         <a href="https://github.com/Lasergamer-04/C" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Projekte ansehen</a>
                     </div>
                     <!-- Projet 8 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Projet 8:&nbsp;Bases de Données</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Projekt 8:&nbsp;Datenbanken</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Création de bases de donnée sur Access, et avec MySQL.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Erstellung von Datenbanken mit Access und MySQL.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Projet 8:&nbsp;Bases de Données</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Projekt 8:&nbsp;Datenbanken</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Création de bases de donnée sur Access, et avec MySQL.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Erstellung von Datenbanken mit Access und MySQL.</p>
                         <a href="https://github.com/Lasergamer-04/BDD" class="text-blue-500 mt-2" data-lang="fr">Voir les projets</a>
                         <a href="https://github.com/Lasergamer-04/BDD" class="text-blue-500 mt-2" data-lang="de" style="display: none;">Projekte ansehen</a>
                      </div>
@@ -120,40 +130,40 @@
         
             <!-- Langues -->
             <div>
-                <h2 class="text-2xl font-bold mb-4" data-lang="fr">Certifications</h2>
-                <h2 class="text-2xl font-bold mb-4" data-lang="de" style="display: none;">Zertifikate</h2>
+                <h2 class="text-2xl font-bold mb-4 light:text-gray-900 dark:text-gray-100" data-lang="fr">Certifications</h2>
+                <h2 class="text-2xl font-bold mb-4 light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Zertifikate</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <!-- C 1 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold">ABIBAC</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Mention tres bien</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Mit Auszeichnung bestanden</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100">ABIBAC</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Mention tres bien</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Mit Auszeichnung bestanden</p>
                     </div>
                     <!-- C 2 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold">Duke of Edinburgh</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Certification reçue.</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Zertifikat erhalten.</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100">Duke of Edinburgh</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Certification reçue.</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Zertifikat erhalten.</p>
                     </div>
                     <!-- C 3 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Langue:&nbsp;Anglais</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Sprache:&nbsp;Englisch</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Niveau B2 (certifié TOEIC)</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Niveau B2 (TOEIC-zertifiziert)</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Langue:&nbsp;Anglais</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Sprache:&nbsp;Englisch</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Niveau B2 (certifié TOEIC)</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Niveau B2 (TOEIC-zertifiziert)</p>
                     </div>
                     <!-- C 4 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold">Passe ton Hack d'abord</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Compétitions de Hacking (sous forme capture the Flage)</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display: none;">Hacking-Wettbewerbe, organisiert vom Französischen Verteidigungs Ministerium (in der form eines Capture the Flag)</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100">Passe ton Hack d'abord</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Compétitions de Hacking (sous forme capture the Flage)</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">Hacking-Wettbewerbe, organisiert vom Französischen Verteidigungs Ministerium (in der form eines Capture the Flag)</p>
                     </div>
                     <!-- C 5 -->
-                    <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-                        <h2 class="text-xl font-semibold" data-lang="fr">Participation a Prologin</h2>
-                        <h2 class="text-xl font-semibold" data-lang="de" style="display: none;">Teilnahme an Prologin</h2>
-                        <p class="text-gray-700 mt-2" data-lang="fr">Avec ma classe de NSI en terminale</p>
-                        <p class="text-gray-700 mt-2" data-lang="de" style="display:none;">Mit meiner NSI-Klasse im Abschlussjahr</p>
+                    <div class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-blue-100 dark:bg-gray-800">
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100 data-lang="fr">Participation a Prologin</h2>
+                        <h2 class="text-xl font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Teilnahme an Prologin</h2>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="fr">Avec ma classe de NSI en terminale</p>
+                        <p class="mt-2 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display:none;">Mit meiner NSI-Klasse im Abschlussjahr</p>
                     </div>
                 </div>
             </div>
@@ -161,12 +171,12 @@
     </div>
     
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4 mt-6">
-        <div class="max-w-4xl mx-auto text-center text-sm" data-lang="fr">
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-4 mt-6 light:bg-gray-800 dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="fr">
             &copy; 2025 Mon Portfolio. Tous droits réservés.
         </div>
-        <div class="max-w-4xl mx-auto text-center text-sm" data-lang="de" style="display: none;">
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="de" style="display: none;">
             &copy; 2025 Mein Portfolio. Alle Rechte vorbehalten.
         </div>
     </footer>

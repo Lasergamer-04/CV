@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>    
     <script src="script.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg">
-
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300 light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
         <!-- Navigation -->
         <nav class="flex justify-center space-x-4 mb-4 sm:mb-6">
-            <a href="index.html?lang=fr" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base" data-lang="fr">CV</a>
-            <a href="info_persos.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="fr">À propos</a>
-            <a href="grid.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="fr">Informations Supplémentaires</a>
 
-            <a href="index.html?lang=de" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base" data-lang="de" style="display: none;">Lebenslauf</a>
-            <a href="info_persos.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="de" style="display: none;">Über mich</a>
-            <a href="grid.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
+            <button onclick="toggleTheme()" class="w-8 h-8">
+                <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
+            </button>
+
+            <a href="index.html?lang=fr" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="fr">CV</a>
+            <a href="info_persos.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">À propos</a>
+            <a href="grid.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">Informations Supplémentaires</a>
+
+            <a href="index.html?lang=de" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="de" style="display: none;">Lebenslauf</a>
+            <a href="info_persos.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Über mich</a>
+            <a href="grid.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
             <!-- Drapeaux pour changer de langue -->
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
@@ -31,25 +40,25 @@
         </nav>
 
         <!-- Header -->
-        <header class="flex flex-col items-center text-center sm:text-left sm:flex-row sm:items-start bg-gray-50 p-4 rounded-lg shadow-md">
+        <header class="flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow sm:text-left sm:flex-row sm:items-start bg-gray-50 p-4 rounded-lg shadow-md light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
             <img src="Images/pablo.jpg" alt="Photo de profil" class="w-24 h-32 sm:w-32 sm:h-40 rounded-md shadow-md">
             <div class="mt-4 sm:mt-0 sm:ml-6">
-                <h1 class="text-2xl sm:text-3xl font-bold">Faivre Pablo</h1>
-                <p class="text-gray-600 text-sm sm:text-base" data-lang="fr">Étudiant en Informatique</p>
-                <p class="text-gray-600 text-sm sm:text-base" data-lang="de" style="display: none;">Informatikstudent</p>
+                <h1 class="text-2xl sm:text-3xl font-bold light:text-gray-900 dark:text-gray-100">Faivre Pablo</h1>
+                <p class="text-gray-600 text-sm sm:text-base light:text-gray-600 dark:text-gray-300" data-lang="fr">Étudiant en Informatique</p>
+                <p class="text-gray-600 text-sm sm:text-base light:text-gray-600 dark:text-gray-300" data-lang="de" style="display: none;">Informatikstudent</p>
             </div>
         </header>
 
         <!-- Informations et Réseaux sociaux -->
         <div class="mt-6 grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-6">
             <!-- Informations -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
                 <!-- FR -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="fr">Informations</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="fr">Informations</h2>
                 <!-- DE -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Informationen</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="de" style="display: none;">Informationen</h2>
                 <!-- FR -->
-                <ul class="mt-2 space-y-2 text-sm sm:text-base" data-lang="fr">
+                <ul class="mt-2 space-y-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">
                     <li class="flex items-center"><strong>Nationalité:&nbsp;</strong>Franco-Allemande</li>
                     <li class="flex items-center"><strong>Langues:&nbsp;</strong>Français, Allemand, Anglais, Espagnol</li>
                     <li class="flex items-center"><strong>Date de naissance:&nbsp;</strong>02/03/2007</li>
@@ -59,7 +68,7 @@
                     <li class="flex items-center"><strong>Adresse:&nbsp;</strong>Manosque (04100), France</li>
                 </ul>
                 <!-- DE -->
-                <ul class="mt-2 space-y-2 text-sm sm:text-base" data-lang="de" style="display: none;">
+                <ul class="mt-2 space-y-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">
                     <li><strong>Nationalität:&nbsp;</strong>Deutsch-Französisch</li>
                     <li><strong>Sprachen:&nbsp;</strong>Französisch, Deutsch, Englisch, Spanisch</li>
                     <li><strong>Geburtsdatum:&nbsp;</strong>02/03/2007</li>
@@ -71,9 +80,11 @@
             </section>
 
             <!-- Réseaux sociaux -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h2 class="text-2xl font-semibold border-b pb-2" data-lang="fr">Réseaux sociaux</h2>
-                <h2 class="text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Soziale Netzwerke</h2>
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-semibold border-b pb-2" data-lang="fr">Réseaux sociaux</h2>
+                    <h2 class="text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Soziale Netzwerke</h2>
+                </div>
 
                 <ul class="mt-2 space-y-2" data-lang="fr">
                     <li class="flex items-center">
@@ -102,37 +113,39 @@
 
             
             <!-- Formations -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
                 <!-- FR -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="fr">Formations</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="fr">Formations</h2>
                 <!-- DE -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Ausbildung</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="de" style="display: none;">Ausbildung</h2>
                 <!-- FR -->
-                <p class="mt-2 text-sm sm:text-base" data-lang="fr">ABIBAC - EIPACA - 2024</p>
-                <p class="mt-2 text-sm sm:text-base" data-lang="fr"><strong>Resultats:</strong> Bac:&nbsp;Mention Très Bien;&nbsp;Abitur:&nbsp;1,2</p>
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">ABIBAC - EIPACA - 2024</p>
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr"><strong>Résultats:</strong> Bac:&nbsp;Mention Très Bien;&nbsp;Abitur:&nbsp;1,2</p>
                 <!-- DE -->
-                <p class="mt-2 text-sm sm:text-base" data-lang="de" style="display: none;">ABIBAC - EIPACA - 2024</p>
-                <p class="mt-2 text-sm sm:text-base" data-lang="de" style="display: none;"><strong>Ergebnisse:</strong> Bac:&nbsp;Mit Auszeichnung;&nbsp;Abitur:&nbsp;1,2</p>
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">ABIBAC - EIPACA - 2024</p>
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;"><strong>Ergebnisse:</strong> Bac:&nbsp;Mit Auszeichnung;&nbsp;Abitur:&nbsp;1,2</p>
                 </br>
-                <p class="mt-2 text-sm sm:text-base" data-lang="fr">Licence d'Informatique et ingénierie du web - ISFATES - En cours (jusqu'en 2027)</p>
-                <p class="mt-2 text-sm sm:text-base" data-lang="de" style="display: none;">Bachelor in Informatik und Web-Engineering - ISFATES - Laufend (bis 2027)</p>
+                <!-- FR -->
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">Licence d'Informatique et ingénierie du web - ISFATES - En cours (jusqu'en 2027)</p>
+                <!-- DE -->
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Bachelor in Informatik und Web-Engineering - ISFATES - Laufend (bis 2027)</p>
             </section>
         
             <!-- Expériences -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
                 <!-- FR -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="fr">Expériences</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="fr">Expériences</h2>
                 <!-- DE -->
-                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Erfahrungen</h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Erfahrungen</h2>
                 <!-- FR -->
-                <p class="mt-2 text-sm sm:text-base" data-lang="fr">
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">
                     Job d'été:&nbsp;J'ai travaille dans un centre aqualudique ou j'ai appris a gérer les clients, 
                     le materiel comme les bouées, les pédalos et les gilet de sauvetage. </br>
                     Vie Associative:&nbsp;Je suis membre de l'association étudiante de l'ISFATES, la DIVA. 
                     Je sais donc m'investire dans des projets et travailler en équipe.
                 </p>
                 <!-- DE -->
-                <p class="mt-2 text-sm sm:text-base" data-lang="de" style="display: none;">
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">
                     Sommerjob:&nbsp;Ich habe in einem Wasserpark gearbeitet, wo ich gelernt habe, Kunden zu betreuen, 
                     Materialien wie Bojen, Tretboote und Rettungswesten zu verwalten. </br>
                     Vereinsleben:&nbsp;Ich bin Mitglied des Studentenvereins der ISFATES, der DIVA. 
@@ -141,84 +154,84 @@
         </div>
 
         <!-- Compétences -->
-        <section class="mt-6 p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="fr">Compétences</h2>
-            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Fähigkeiten</h2>
-
+        <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences</h2>
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Fähigkeiten</h2>
+        
             <!-- Compétences Informatiques -->
             <div class="mt-4">
-                <h3 class="text-lg font-semibold mb-4" data-lang="fr">Compétences Informatiques</h3>
-                <h3 class="text-lg font-semibold mb-4" data-lang="de" style="display: none;">IT-Fähigkeiten</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences Informatiques</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">IT-Fähigkeiten</h3>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Python</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">Python</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width:100%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">HTML</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">HTML</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">CSS</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">CSS</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">JavaScript</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">JavaScript</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 60%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">SQL</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">SQL</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 60%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">C</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">C</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 50%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
+        
             <!-- Compétences Linguistiques -->
             <div class="mt-6">
-                <h3 class="text-lg font-semibold mb-4" data-lang="fr">Compétences Linguistiques</h3>
-                <h3 class="text-lg font-semibold mb-4" data-lang="de" style="display: none;">Sprachkenntnisse</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences Linguistiques</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Sprachkenntnisse</h3>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="fr">Français</label>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="de" style="display: none;">Französisch</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Français</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Französisch</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="fr">Allemand</label>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="de" style="display: none;">Deutsch</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Allemand</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Deutsch</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="fr">Anglais</label>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="de" style="display: none;">Englisch</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Anglais</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Englisch</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="fr">Espagnol</label>
-                        <label class="block text-sm font-medium text-gray-700" data-lang="de" style="display: none;">Spanisch</label>
-                        <div class="w-full bg-gray-200 rounded-full h-4">
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Espagnol</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Spanisch</label>
+                        <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 30%;"></div>
                         </div>
                     </div>
@@ -227,12 +240,12 @@
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4 mt-6">
-        <div class="max-w-4xl mx-auto text-center text-sm" data-lang="fr">
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-4 mt-6 light:bg-gray-800 dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="fr">
             &copy; 2025 Mon Portfolio. Tous droits réservés.
         </div>
-        <div class="max-w-4xl mx-auto text-center text-sm" data-lang="de" style="display: none;">
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="de" style="display: none;">
             &copy; 2025 Mein Portfolio. Alle Rechte vorbehalten.
         </div>
     </footer>

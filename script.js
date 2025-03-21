@@ -15,5 +15,44 @@ function applyLanguage() {
     document.documentElement.lang = lang;
 }
 
-// Apply language on page load
-window.onload = applyLanguage;
+function applyTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Récupérer le thème enregistré
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+
+    // Supprimer toutes les classes de mode et appliquer le bon
+    html.classList.remove('light', 'dark');
+    html.classList.add(savedTheme);
+
+    // Mettre à jour l'icône du bouton si l'élément existe
+    if (themeIcon) {
+        themeIcon.src = savedTheme === 'dark' ? 'Images/moon.jpg' : 'Images/sun.jpg';
+    }
+
+    console.log('Thème appliqué:', savedTheme); // Vérification dans la console
+}
+
+function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+
+    // Vérifier le mode actuel et basculer
+    const newTheme = html.classList.contains('light') ? 'dark' : 'light';
+
+    html.classList.remove('light', 'dark'); // Nettoyer les classes
+    html.classList.add(newTheme); // Appliquer le nouveau mode
+
+    // Mettre à jour l'icône et enregistrer le mode dans localStorage
+    if (themeIcon) {
+        themeIcon.src = newTheme === 'dark' ? 'Images/moon.jpg' : 'Images/sun.jpg';
+    }
+    localStorage.setItem('theme', newTheme);
+
+    console.log('Thème changé en:', newTheme); // Vérification dans la console
+}
+
+// Appliquer le thème au chargement de la page
+window.onload = () => {
+    applyLanguage();
+    applyTheme();
+};
