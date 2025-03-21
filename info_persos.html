@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="light">
+<html lang="fr" class="light" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,18 @@
             darkMode: 'class',
         };
     </script>    
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
+    </script>
+
     <script src="script.js" defer></script>
 </head>
+
 <body class="bg-gray-100 text-gray-900 transition-colors duration-300 light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
     <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
         <!-- Navigation -->
@@ -42,8 +52,7 @@
         <!-- Main Content -->
         <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
             <!-- About Me Section -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700"
-                style="background-image: url('Images/courrir.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" style="background-image: url('Images/courrir.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-aos="fade-up">
                 <div class="bg-white bg-opacity-80 p-4 rounded-lg light:bg-white dark:bg-gray-800 dark:bg-opacity-80">
                     <div class="flex items-center">
                         <img src="Images/silhouette.png" alt="silhouette" class="h-6 w-6 mr-2">
@@ -81,8 +90,7 @@
 
         
             <!-- Hobbies Section -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700"
-                style="background-image: url('Images/velo.jpg'); background-size: cover; background-position: center;">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" style="background-image: url('Images/velo.jpg'); background-size: cover; background-position: center;" data-aos="fade-up">
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center bg-white bg-opacity-80 p-2 rounded-md light:bg-white dark:bg-gray-800 dark:bg-opacity-80" data-lang="fr">
                     <span class="material-icons text-blue-500 mr-2">🔥</span> Mes Hobbies
                 </h2>
@@ -141,7 +149,7 @@
             </section>
         
             <!-- Goals Section -->
-            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-4 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700">
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-4 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" data-aos="fade-up">
                 <div class="flex items-center">
                     <img src="Images/chercher.jpeg" alt="Chercher" class="h-6 w-6 mr-2">
                     <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center light:text-gray-900 dark:text-gray-100" data-lang="fr">
