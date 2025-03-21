@@ -51,6 +51,7 @@ function toggleTheme() {
     console.log('Thème changé en:', newTheme); // Vérification dans la console
 }
 
+
 // Appliquer le thème au chargement de la page
 window.onload = () => {
     applyLanguage();

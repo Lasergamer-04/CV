@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV</title>
+    <title data-lang="fr">Mon CV</title>
+    <title data-lang="de" style="display: none;">Mein Lebenslauf</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,20 +26,53 @@
 <body class="bg-gray-100 text-gray-900 transition-colors duration-300 light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
     <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
         <!-- Navigation -->
-        <nav class="flex justify-center space-x-4 mb-4 sm:mb-6">
+        <details class="sm:hidden">
+            <summary class="cursor-pointer text-gray-600 hover:text-blue-700">Menu</summary>
+            <button onclick="toggleTheme()" class="w-8 h-8">
+                <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
+            </button>
+            <div class="flex flex-col space-y-2 mt-2">
+                <a href="index.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700" data-lang="fr">CV</a>
+                <a href="info_persos.html?lang=fr" class="text-sm text-blue-700" data-lang="fr">À propos</a>
+                <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700" data-lang="fr">Informations Supplémentaires</a>
+                <a href="index.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700" data-lang="de" style="display: none;">Lebenslauf</a>
+                <a href="info_persos.html?lang=de" class="text-sm text-blue-700" data-lang="de" style="display: none;">Über mich</a>
+                <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <a href="#" onclick="switchLanguage('fr')">
+                    <img src="Images/France.png" alt="Français" class="w-6 h-6">
+                </a>
+                <a href="#" onclick="switchLanguage('de')">
+                    <img src="Images/Deutschand.jpeg" alt="Deutsch" class="w-6 h-6">
+                </a>
+            </div>
+        </details>
+
+        <nav class="hidden sm:flex justify-center border-b border-gray-300 mb-4 sm:mb-6">
 
             <button onclick="toggleTheme()" class="w-8 h-8">
                 <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
             </button>
 
-            <a href="index.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">CV</a>
-            <a href="info_persos.html?lang=fr" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="fr">À propos</a>
-            <a href="grid.html?lang=fr" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="fr">Informations Supplémentaires</a>
-
-            <a href="index.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Lebenslauf</a>
-            <a href="info_persos.html?lang=de" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-sm sm:text-base light:bg-blue-700 dark:bg-blue-500" data-lang="de" style="display: none;">Über mich</a>
-            <a href="grid.html?lang=de" class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm sm:text-base hover:bg-blue-600 light:bg-blue-500 dark:bg-blue-400" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
-            <!-- Drapeaux pour changer de langue -->
+            <a href="index.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="fr">
+                CV
+            </a>
+            <a href="info_persos.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-blue-700 border-b-2 border-blue-700 hover:border-blue-500 transition" data-lang="fr">
+                À propos
+            </a>
+            <a href="grid.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="fr">
+                Informations Supplémentaires
+            </a>
+            <a href="index.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="de" style="display: none;">
+                Lebenslauf
+            </a>
+            <a href="info_persos.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-blue-700 border-b-2 border-blue-700 hover:border-blue-500 transition" data-lang="de" style="display: none;">
+                Über mich
+            </a>
+            <a href="grid.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="de" style="display: none;">
+                Zusätzliche Informationen
+            </a>
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
                     <img src="Images/France.png" alt="Français" class="w-6 h-6">
@@ -67,7 +101,7 @@
                         Je m'appelle Faivre Pablo, j'ai 18 ans et je suis étudiant en informatique. 
                         Je suis né à Delmenhorst en Allemagne et j'ai rapidement appris l'anglais dans une école allemande et anglaise. 
                         Je vis en France depuis 2017, où je suis entré dans une école internationale. 
-                        J'ai passé ma scolarité dans cette école et j'ai obtenu mon ABIBAC avec mention très bien. 
+                        J'ai passé mon collège et mon lycée dans cette école et j'ai obtenu mon ABIBAC avec mention très bien. 
                         J'aime beaucoup l'informatique, que je pratique depuis la seconde en NSI, ou j'ai appris la programmation en python, le HTML et le SQL. 
                         Je suis passionné par le développement web et python depuis, ce qui ma poussé à intégrer l'ISFATES pour ma liscence.
                         J'y apprend le C et le Wordpress, et j'y ammeliore mes compétences en python et en développement web.
