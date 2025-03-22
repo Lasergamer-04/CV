@@ -5,7 +5,7 @@
   - OU mettre les fichier dans par exempe VScode et utiliser l'extension Live serveur pour consulter le CV. Lancez bien avec index.html.
 
 ## Infos:
-  - Site en Mobile first, mais avec des adaptations pour des écrans md, et lg
+  - Site en Mobile first, mais avec des adaptations pour des écrans MD, et LG
   - Navigation:
       - en Mobile: avec un menu ou grace a un systeme de scroll quand on est sur le bas de la page.
       - sur Tablette: avec un systeme de tabs sur le haut ou comme sur mobile avec le systeme de scroll.
@@ -23,7 +23,7 @@
   - Oder: alles herunterladen und index.html mit ihrem browser öffnen.
   - Oder alles herunterladen und es auf z.B. VScode öffnen und mit Live server Hosten.
 
-## Info:
+## Infos:
  - Mobile-First-Site, aber mit Anpassungen für MD- und LG-Bildschirme
  - Navigation:
    - auf Mobilgeräten: mit einem Menü oder dank eines Scroll-Systems, wenn Sie sich unten auf der Seite befinden.
