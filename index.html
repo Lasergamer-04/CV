@@ -11,7 +11,7 @@
             darkMode: 'class',
         };
     </script>
-
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -27,9 +27,11 @@
         <!-- Navigation -->
         <details class="sm:hidden">
             <summary class="cursor-pointer text-gray-600 hover:text-blue-700">Menu</summary>
+
             <button onclick="toggleTheme()" class="w-8 h-8">
                 <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
             </button>
+            
             <div class="flex flex-col space-y-2 mt-2">
                 <a href="index.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700" data-lang="fr">CV</a>
                 <a href="info_persos.html?lang=fr" class="text-sm text-blue-700" data-lang="fr">À propos</a>
@@ -284,6 +286,7 @@
         </section>
     </div>
 
+
      <!-- Footer -->
      <footer class="bg-gray-800 text-white py-4 mt-6 light:bg-gray-800 dark:bg-gray-900">
         <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="fr">
@@ -293,5 +296,13 @@
             &copy; 2025 Mein Portfolio. Alle Rechte vorbehalten.
         </div>
     </footer>
+
+    <div id="next-page-message" data-lang="fr">
+        Aller sur la prochaine page...
+    </div>
+
+    <div id="next-page-message" data-lang="de" style="display: none;">
+        Gehe zur nächsten Seite...
+    </div>
 </body>
 </html>
