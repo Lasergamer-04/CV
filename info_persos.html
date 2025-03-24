@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="fr">Mon CV</title>
     <title data-lang="de" style="display: none;">Mein Lebenslauf</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
         };
     </script>    
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -34,12 +37,24 @@
             </button>
 
             <div class="flex flex-col space-y-2 mt-2">
-                <a href="index.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700" data-lang="fr">CV</a>
-                <a href="info_persos.html?lang=fr" class="text-sm text-blue-700" data-lang="fr">À propos</a>
-                <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700" data-lang="fr">Informations Supplémentaires</a>
-                <a href="index.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700" data-lang="de" style="display: none;">Lebenslauf</a>
-                <a href="info_persos.html?lang=de" class="text-sm text-blue-700" data-lang="de" style="display: none;">Über mich</a>
-                <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700" data-lang="de" style="display: none;">Zusätzliche Informationen</a>
+                <a href="index.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    CV
+                </a>
+                <a href="info_persos.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    À propos
+                </a>
+                <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    Informations Supplémentaires
+                </a>
+                <a href="index.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Lebenslauf
+                </a>
+                <a href="info_persos.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Über mich
+                </a>
+                <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Zusätzliche Informationen
+                </a>
             </div>
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
@@ -51,30 +66,31 @@
             </div>
         </details>
 
-        <nav class="hidden sm:flex justify-center border-b border-gray-300 mb-4 sm:mb-6">
+        <nav class="hidden space-x-4 sm:flex justify-center border-b border-gray-300 mb-4 sm:mb-6">
 
             <button onclick="toggleTheme()" class="w-8 h-8">
                 <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
             </button>
 
-            <a href="index.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="fr">
+            <a href="index.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
                 CV
             </a>
-            <a href="info_persos.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-blue-700 border-b-2 border-blue-700 hover:border-blue-500 transition" data-lang="fr">
+            <a href="info_persos.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
                 À propos
             </a>
-            <a href="grid.html?lang=fr" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="fr">
+            <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
                 Informations Supplémentaires
             </a>
-            <a href="index.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="de" style="display: none;">
+            <a href="index.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                 Lebenslauf
             </a>
-            <a href="info_persos.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-blue-700 border-b-2 border-blue-700 hover:border-blue-500 transition" data-lang="de" style="display: none;">
+            <a href="info_persos.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                 Über mich
             </a>
-            <a href="grid.html?lang=de" class="px-4 py-2 text-sm sm:text-base text-gray-600 hover:text-blue-700 hover:border-blue-500 border-b-2 border-transparent transition" data-lang="de" style="display: none;">
+            <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                 Zusätzliche Informationen
             </a>
+
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
                     <img src="Images/France.png" alt="Français" class="w-6 h-6">
