@@ -122,7 +122,7 @@ function resetTouch() {
 
 // Fonction pour changer de page
 function goToNextPage() {
-    const pages = ["index.html", "info_persos.html", "grid.html", "index.html"];
+    const pages = ["CV.html", "info_persos.html", "grid.html", "CV.html"];
     const currentPage = window.location.pathname.split("/").pop();
     const currentIndex = pages.indexOf(currentPage);
 
