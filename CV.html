@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="fr">Mon CV</title>
     <title data-lang="de" style="display: none;">Mein Lebenslauf</title>
+    <title data-lang="en" style="display: none;">My Resume</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -45,6 +46,7 @@
                 <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
                     Informations Supplémentaires
                 </a>
+
                 <a href="CV.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                     Lebenslauf
                 </a>
@@ -54,6 +56,16 @@
                 <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                     Zusätzliche Informationen
                 </a>
+                
+                <a href="CV.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                    Resume
+                </a>
+                <a href="info_persos.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                    About
+                </a>
+                <a href="grid.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                    Additional Information
+                </a>
             </div>
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
@@ -61,6 +73,9 @@
                 </a>
                 <a href="#" onclick="switchLanguage('de')">
                     <img src="Images/Deutschand.jpeg" alt="Deutsch" class="w-6 h-6">
+                </a>
+                <a href="#" onclick="switchLanguage('en')">
+                    <img src="Images/uk.jpg" alt="English" class="w-6 h-6">
                 </a>
             </div>
         </details>
@@ -80,6 +95,7 @@
             <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
                 Informations Supplémentaires
             </a>
+
             <a href="CV.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                 Lebenslauf
             </a>
@@ -89,6 +105,16 @@
             <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
                 Zusätzliche Informationen
             </a>
+
+            <a href="CV.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                Resume
+            </a>
+            <a href="info_persos.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                About
+            </a>
+            <a href="grid.html?lang=en" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="en" style="display: none;">
+                Additional Information
+            </a>
             <!-- Drapeaux pour changer de langue -->
             <div class="flex items-center space-x-2">
                 <a href="#" onclick="switchLanguage('fr')">
@@ -96,6 +122,9 @@
                 </a>
                 <a href="#" onclick="switchLanguage('de')">
                     <img src="Images/Deutschand.jpeg" alt="Deutsch" class="w-6 h-6">
+                </a>
+                <a href="#" onclick="switchLanguage('en')">
+                    <img src="Images/uk.jpg" alt="English" class="w-6 h-6">
                 </a>
             </div>
         </nav>
@@ -107,6 +136,7 @@
                 <h1 class="text-2xl sm:text-3xl font-bold light:text-gray-900 dark:text-gray-100">Faivre Pablo</h1>
                 <p class="text-gray-600 text-sm sm:text-base light:text-gray-600 dark:text-gray-300" data-lang="fr">Étudiant en Informatique</p>
                 <p class="text-gray-600 text-sm sm:text-base light:text-gray-600 dark:text-gray-300" data-lang="de" style="display: none;">Informatikstudent</p>
+                <p class="text-gray-600 text-sm sm:text-base light:text-gray-600 dark:text-gray-300" data-lang="en" style="display: none;">Computer Science Student</p>
             </div>
         </header>
 
@@ -118,6 +148,8 @@
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="fr">Informations</h2>
                 <!-- DE -->
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="de" style="display: none;">Informationen</h2>
+                <!-- EN -->
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="en" style="display: none;">Informations</h2>
                 <!-- FR -->
                 <ul class="mt-2 space-y-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">
                     <li class="flex items-center"><strong>Nationalité:&nbsp;</strong>Franco-Allemande</li>
@@ -138,6 +170,16 @@
                     <li><strong>Telefon:&nbsp;</strong>+33 6 14 64 62 06</li>
                     <li><strong>Adresse:&nbsp;</strong>Manosque (04100), Frankreich</li>
                 </ul>
+                <!-- EN -->
+                <ul class="mt-2 space-y-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">
+                    <li><strong>Nationality:&nbsp;</strong>French-German</li>
+                    <li><strong>Languages:&nbsp;</strong>French, German, English, Spanish</li>
+                    <li><strong>Date of Birth:&nbsp;</strong>02/03/2007</li>
+                    <li><strong>Place of Birth:&nbsp;</strong>Delmenhorst, Germany</li>
+                    <li><strong>Email:&nbsp;</strong>pablofaivreeipaca@gmail.com</li>
+                    <li><strong>Phone:&nbsp;</strong>+33 6 14 64 62 06</li>
+                    <li><strong>Address:&nbsp;</strong>Manosque (04100), France</li>
+                </ul>
             </section>
 
             <!-- Réseaux sociaux -->
@@ -145,25 +187,15 @@
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-2xl font-semibold border-b pb-2" data-lang="fr">Réseaux sociaux</h2>
                     <h2 class="text-2xl font-semibold border-b pb-2" data-lang="de" style="display: none;">Soziale Netzwerke</h2>
+                    <h2 class="text-2xl font-semibold border-b pb-2" data-lang="en" style="display: none;">Social Networks</h2>
                 </div>
 
-                <ul class="mt-2 space-y-2" data-lang="fr">
+                <ul class="mt-2 space-y-2">
                     <li class="flex items-center">
                         <img src="Images/github-logo.png" alt="Logo GitHub" class="w-6 h-6 mr-2">
                         <a href="https://github.com/Lasergamer-04" class="text-blue-500">GitHub</a>
                     </li>
 
-                    <li class="flex items-center">
-                        <img src="Images/logo-insta.jpeg" alt="Logo Instagram" class="w-6 h-6 mr-2">
-                        <a href="https://www.instagram.com/pablo.fvr/" class="text-blue-500">Instagram</a>
-                    </li>
-                </ul>
-
-                <ul class="mt-2 space-y-2" data-lang="de" style="display: none;">
-                    <li class="flex items-center">
-                        <img src="Images/github-logo.png" alt="Logo GitHub" class="w-6 h-6 mr-2">
-                        <a href="https://github.com/Lasergamer-04" class="text-blue-500">GitHub</a>
-                    </li>
                     <li class="flex items-center">
                         <img src="Images/logo-insta.jpeg" alt="Logo Instagram" class="w-6 h-6 mr-2">
                         <a href="https://www.instagram.com/pablo.fvr/" class="text-blue-500">Instagram</a>
@@ -179,17 +211,24 @@
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="fr">Formations</h2>
                 <!-- DE -->
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="de" style="display: none;">Ausbildung</h2>
+                <!-- EN -->
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:border-gray-300 dark:border-gray-600" data-lang="en" style="display: none;">Education</h2>
                 <!-- FR -->
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">ABIBAC - EIPACA - 2024</p>
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr"><strong>Résultats:</strong> Bac:&nbsp;Mention Très Bien;&nbsp;Abitur:&nbsp;1,2</p>
                 <!-- DE -->
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">ABIBAC - EIPACA - 2024</p>
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;"><strong>Ergebnisse:</strong> Bac:&nbsp;Mit Auszeichnung;&nbsp;Abitur:&nbsp;1,2</p>
+                <!-- EN -->
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">ABIBAC - EIPACA - 2024</p>
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;"><strong>Results:</strong> Bac:&nbsp;High Honors;&nbsp;Abitur:&nbsp;1.2</p>
                 </br>
                 <!-- FR -->
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">Licence d'Informatique et ingénierie du web - ISFATES - En cours (jusqu'en 2027)</p>
                 <!-- DE -->
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Bachelor in Informatik und Web-Engineering - ISFATES - Laufend (bis 2027)</p>
+                <!-- EN -->
+                <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">Bachelor in Computer Science and Web Engineering - ISFATES - Ongoing (until 2027)</p>
             </section>
         
             <!-- Expériences -->
@@ -198,6 +237,8 @@
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="fr">Expériences</h2>
                 <!-- DE -->
                 <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Erfahrungen</h2>
+                <!-- EN -->
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">Experiences</h2>
                 <!-- FR -->
                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="fr">
                     Job d'été:&nbsp;J'ai travaille dans un centre aqualudique ou j'ai appris a gérer les clients, 
@@ -211,6 +252,14 @@
                     Materialien wie Bojen, Tretboote und Rettungswesten zu verwalten. </br>
                     Vereinsleben:&nbsp;Ich bin Mitglied des Studentenvereins der ISFATES, der DIVA. 
                     Ich kann mich also in Projekte einbringen und im Team arbeiten.
+                </p>
+                <!-- EN -->
+                 <p class="mt-2 text-sm sm:text-base light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">
+                    Summer job:&nbsp;I worked in a water park where I learned to manage customers, 
+                    equipment such as buoys, pedal boats, and life jackets. </br>
+                    Student life:&nbsp;I am a member of the ISFATES student association, the DIVA. 
+                    I can therefore invest in projects and work as a team.
+                </p>
             </section>
         </div>
 
@@ -218,11 +267,13 @@
         <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" data-aos="fade-up">
             <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences</h2>
             <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Fähigkeiten</h2>
+            <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">Skills</h2>
         
             <!-- Compétences Informatiques -->
             <div class="mt-4">
                 <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences Informatiques</h3>
                 <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">IT-Fähigkeiten</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">IT Skills</h3>
                 <div class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300">Python</label>
@@ -267,10 +318,12 @@
             <div class="mt-6">
                 <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="fr">Compétences Linguistiques</h3>
                 <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Sprachkenntnisse</h3>
+                <h3 class="text-lg font-semibold mb-4 light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">Language Skills</h3>
                 <div class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Français</label>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Französisch</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">French</label>
                         <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 100%;"></div>
                         </div>
@@ -278,6 +331,7 @@
                     <div>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Allemand</label>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Deutsch</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">German</label>
                         <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 100%;"></div>
                         </div>
@@ -285,13 +339,15 @@
                     <div>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Anglais</label>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Englisch</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">English</label>
                         <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
-                            <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                            <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="fr">Espagnol</label>
                         <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="de" style="display: none;">Spanisch</label>
+                        <label class="block text-sm font-medium light:text-gray-800 dark:text-gray-300" data-lang="en" style="display: none;">Spanish</label>
                         <div class="w-full bg-gray-200 rounded-full h-4 light:bg-gray-200 dark:bg-gray-700">
                             <div class="bg-blue-500 h-4 rounded-full" style="width: 30%;"></div>
                         </div>
@@ -312,6 +368,10 @@
             &copy; 2025 Mein Portfolio.<br/>
             Scrollen sie nach unten um zur nächsten seite zu gelangen
         </div>
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="en" style="display: none;">
+            &copy; 2025 My Portfolio.<br/>
+            Scroll down to access the next page.
+        </div>
     </footer>
 
     <div id="next-page-message" data-lang="fr">
@@ -320,6 +380,10 @@
 
     <div id="next-page-message" data-lang="de" style="display: none;">
         Gehe zur nächsten Seite...
+    </div>
+    
+    <div id="next-page-message" data-lang="en" style="display: none;">
+        Going to the next page...
     </div>
     
 </body>

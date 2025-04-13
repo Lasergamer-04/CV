@@ -128,13 +128,12 @@ function goToNextPage() {
 
     if (currentIndex !== -1 && currentIndex < pages.length - 1) {
         const nextPage = pages[currentIndex + 1];
-        const nextLink = document.querySelector(`a[href$="${nextPage}"]`);
+        const nextLink = document.querySelector(`a[href="${nextPage}"]`);
 
         if (nextLink) {
             nextLink.click(); // Simule un clic sur le lien
         } else {
-            const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-            window.location.href = basePath + nextPage + window.location.search;
+            window.location.href = nextPage; // Redirige si aucun lien n'est trouvé
         }
     } else {
         console.log("Aucune page suivante !");
