@@ -125,15 +125,20 @@ function goToNextPage() {
     const pages = ["CV.html", "info_persos.html", "grid.html", "CV.html"];
     const currentPage = window.location.pathname.split("/").pop();
     const currentIndex = pages.indexOf(currentPage);
+    const lang = document.documentElement.lang;
 
     if (currentIndex !== -1 && currentIndex < pages.length - 1) {
         const nextPage = pages[currentIndex + 1];
-        const nextLink = document.querySelector(`a[href="${nextPage}"]`);
+        const nextLink = document.querySelector(`a[href^="${nextPage}"]`);
+
+        // Construction de l'URL avec le paramètre de langue
+        const nextUrl = `${nextPage}?lang=${lang}`;
 
         if (nextLink) {
-            nextLink.click(); // Simule un clic sur le lien
+            nextLink.href = nextUrl; // Met à jour dynamiquement le lien avec la langue
+            nextLink.click();        // Simule un clic sur le lien
         } else {
-            window.location.href = nextPage; // Redirige si aucun lien n'est trouvé
+            window.location.href = nextUrl; // Redirige manuellement avec la langue
         }
     } else {
         console.log("Aucune page suivante !");
